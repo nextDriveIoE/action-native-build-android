@@ -56,7 +56,7 @@ runs:
         KEYSTORE: ${{ inputs.keystore-base64 }}
         KEYSTORE_PASSWORD: ${{ inputs.keystore-password }}
         KEYSTORE_ALIAS: ${{ inputs.keystore-alias }}
-      working-directory: ${{ inputs.working-directory }}/android
+      working-directory: ${{ inputs.working-directory }}
 
     - name: Build
       run: ${{ inputs.build-cmd }}
