@@ -69,6 +69,8 @@ runs:
       run: |
         ./gradlew :libraryshared-Android:clean :networking:clean
         ./gradlew :libraryshared-Android:assembleStaging :networking:assembleStaging
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}  
         
     - name: Build
       run: ${{ inputs.build-cmd }}
