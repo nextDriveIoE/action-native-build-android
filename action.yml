@@ -59,7 +59,9 @@ runs:
       working-directory: ${{ inputs.working-directory }}
 
     - name: Clean build
-      run: ./gradlew clean
+      run: |
+        ./gradlew --stop
+        ./gradlew clean
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       
